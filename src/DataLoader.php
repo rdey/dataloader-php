@@ -389,7 +389,7 @@ class DataLoader implements DataLoaderInterface
      * @param array      $queue
      * @param \Exception $error
      */
-    private function failedDispatch($queue, \Exception $error)
+    private function failedDispatch($queue, \Throwable $error)
     {
         foreach ($queue as $index => $data) {
             $this->clear($data['key']);
